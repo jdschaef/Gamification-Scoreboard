@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<div style="text-align:center;"><img src="banner2_1.jpg" align="center" alt="Hacker Banner" width="900px" height="200px"></div>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body bgcolor="DEE7EF">
+<br>
+<div class="nav">
+      <ul>
+        <li class="Home"><a href="index.php">Home</a></li>
+        <li class="About"><a href="about.html">About</a></li>
+	<li class="Launch"><a href="launch.html">Launch</a></li> 
+	<li class="Downloads"><a href="download.html">Downloads</a></li>
+        <li class="Flags"><a href="flag.php">Flags</a></li>
+        <li class="Future"><a href="future.html">Future</a></li>
+	</ul>
+    </div>
+<br>
+
+<div align="left" style="height:600px; width:600px; margin:0 auto;">
+<h1 align="center">Abstract</h1>
+<h2 align="center">Gamification of Cyber Security</h1>
+
+<p style="font-size:16px">This project aims at giving students of the Kansas State Cyber Defense Club the freedom to practice exploits in their home labs. Using the power of automation with tools like Ansible, I aim to create scripts that can run on a remote VM to create vulnerable services to allow members to practice exploits with the maximum amount of availability.
+<br><br>Previously this was all done on the Cyber Defense Club's mobile servers with the power of VMWare's Vsphere (their ESX server). This meant that students would have to gain access with the wireless access point located in the Cyber Defense Lab. However, with the new direction of this research, students will be able to download scripts at school and set up the same environment from their homes. 
+<br><br>This project will also fit into the deployment phase of Simon Novelly's WarGames Ngen project. By deploying a network with this engine, an individual can run my Ansible scripts from a deployment computer which will set up a virtual network with vulnerable services.  
+<br><br>This research will be in tandem with research done for a sociology class reviewing the social aspect of teaching students how to exploit vulnerabilities in services. Surveys will be handed out to participants in this exercise to gain a student perspective on how these challenges benefit the education of our Cyber Defense Members. These surveys are anonymous and will also gauge the intentions of newer members motivation to try exploits against real networks. 
+<br><br>I will also try to gauge the motivation of students to continue participating in the challenges. Success will depend on the interest of students to complete the exploits which means balancing the weight of entertainment and challenge. This is a difficult juggling act as many members are coming in a varying levels of expertise in the area of cyber security. 
+<br><br>I predict the ease of doing these at home will allow an availability that will promote a better percent of participation and completion. This will be apart of a bigger project to pass down to the Cyber Defense Club. By giving a framework to our club, the idea is that students will continue making exploits and create a library of scripts that will train newer members in exploiting machines in creative ways. 
+ </p>
+<br><br>
+
+<h2 align="center">Working with Ansible</h1>
+<p style="font-size:16px">
+Setting up Ansible is simple, but it should already be on the VMs giving in Downloads.
+<br>
+$ sudo apt-get install software-properties-common<br>​
+$ sudo apt-add-repository ppa:ansible/ansible​<br>
+$ sudo apt-get update​<br>
+$ sudo apt-get install ansible<br>
+</p>
+<p style="font-size:16px">Test connection with:<br>
+    $ ansible [challengeServer] -m ping​<br>
+    Should output:​<br><br>
+    [YOUR VM IP ADDRESS] | success >> {<br>​
+        "changed": false,​<br>
+        "ping": "pong"​<br>
+    }<br>
+<br>
+<h2 align="center"></h1>
+
+<br><br>
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<div style="text-align:center;"><img src="banner2_1.jpg" align="center" alt="Hacker Banner" width="900px" height="200px"></div>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body bgcolor="DEE7EF">
+<br>
+<div class="nav">
+      <ul>
+        <li class="Home"><a href="index.php">Home</a></li>
+        <li class="About"><a href="about.html">About</a></li>
+        <li class="Launch"><a href="launch.html">Launch</a></li>
+	<li class="Downloads"><a href="download.html">Downloads</a></li>
+        <li class="Flags"><a href="flag.php">Flags</a></li>
+        <li class="Future"><a href="future.html">Future</a></li>
+	</ul>
+    </div>
+<br>
+
+
+
+<div align="left" style="height:600px; width:600px; margin:0 auto;">
+<h1 align="center">Launch</h1>
+
+<p align="center">This section of the website specifically looks at the how to use the Ansible scripts to create vulnerable VMs that we will exploit later.
+Setting up each scenario is as simple as downloading a zip file from the <a href="http://scoreboard.ddns.net/download.html">Downloads Page</a>, unzipping the content, changing a hosts file, and running the script. </p>
+<p align="center">1. Unzip the folder with:<br>sudo unzip level#.zip</p>
+<p align="center"><br>Windows it will be as simple as right clicking on the folder and extracting the contents. We will need the files on your ClientVM so please make a folder with the level name and simply copy over the content there. Notice that we should never have to touch the ServerVM.<br></p>
+<p align="center"><br>Now lets edit the host file that comes with each script. The host file tells Ansbile which machines to run the playbooks on. It will have groupings with brackets. I generally just make a group called [Apache], but we will not have to worry about this. Simply change the IP address of the host file to reflect the IP address of your ServerVM. So simply open a terminal on ServerVM and type:</p>
+<p align="center">2. ifconfig</p>
+<p align="center">Now use this to change the host file.</p>
+<p align="center">3. Change the directory to the Level that you want to start. Then edit the host file with:<br>sudo nano hosts</p>
+<p align="center">Okay, we are all done with the set up of our target hosts. We can now run our first playbook.</p>
+<p align="center">4. Lets run our first playbook with a YML file. Run a playbook with:</p>
+<p align="center">sudo ansible-playbook level[#].yml --ask-sudo-pass -k<br>Note that level[#] is varied depending on which level you want to use.</p>
+<p align="center">This should require you to type in several passwords for the machine. Every password should be: <b>guest</b></p>
+<p align="center">Normally Ansible uses an SSH key for this process so you could use sudo ssh-keygen to make a pair of keys that would allow for easier access when running playbooks. I suggest that players of these games follow Digital Oceans guide to doing this.</p>
+<p align="center">If you followed Launch's instructions, you should be able to run Ansible scripts with the best of them. I also suggest that future members of Kansas State's CDC learn how to use Ansible to automate the setup process for VMs and continue making these challenges. By reading through all of this you have earned half a flag: <b>passed</b> <br><br>Find the other half of the flag somewhere on the website. You can redeem this at the <a href="https://scoreboard.ddns.net/flag.php">Flag Page</a>. You may also create a team if you do not have one at the <a href="http://scoreboard.ddns.net/newteam.php">New Team Page</a></p>
+<br><br><br>
+<p align="center">Please send any suggestions to jdschaef ((at) ksu (dot)) edu so that I can make these instructions better. Enjoy the Hunger Games</p> 
+
+
+
+
+
+</div>
+
+</body>
+</html>
